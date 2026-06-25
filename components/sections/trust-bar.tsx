@@ -1,45 +1,61 @@
+import Image from "next/image";
 import { Reveal } from "@/components/motion/reveal";
-import { stats, partners } from "@/content/site";
+import { partners, type Partner } from "@/content/partners";
 
 export function TrustBar() {
-  return (
-    <section className="relative border-y border-line/70 bg-card/60 py-14 sm:py-16">
-      <div className="container-page">
-        {/* Stats */}
-        <dl className="grid grid-cols-2 gap-x-6 gap-y-8 lg:grid-cols-4">
-          {stats.map((s, i) => (
-            <Reveal as="div" key={s.label} delay={i * 0.06}>
-              <div className="flex flex-col">
-                <dt className="order-2 mt-1 text-sm leading-snug text-muted">
-                  {s.label}
-                </dt>
-                <dd className="order-1 font-display text-4xl font-medium text-navy sm:text-5xl">
-                  {s.value}
-                </dd>
-              </div>
-            </Reveal>
-          ))}
-        </dl>
+  const rowA = partners.slice(0, 8);
+  const rowB = partners.slice(8);
 
-        {/* Partners */}
-        <div className="mt-14">
-          <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+  return (
+    <section className="relative border-y border-line/70 bg-card/50 py-16 sm:py-20">
+      <div className="container-page">
+        <Reveal className="flex flex-col items-center text-center">
+          <span className="eyebrow mb-4">Parcerias de confiança</span>
+          <h2 className="max-w-2xl text-3xl sm:text-4xl">
             Trabalhamos com todas as seguradoras a operar em Portugal
+          </h2>
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-soft">
+            Como somos independentes, comparamos as soluções das principais
+            seguradoras do mercado — e recomendamos, com total imparcialidade, a
+            mais indicada para si.
           </p>
-          <div className="marquee-mask relative mt-7 flex overflow-hidden">
-            <div className="flex shrink-0 animate-marquee items-center gap-12 pr-12">
-              {[...partners, ...partners].map((name, i) => (
-                <span
-                  key={`${name}-${i}`}
-                  className="whitespace-nowrap font-display text-xl font-medium text-navy/35 transition-colors hover:text-navy/60"
-                >
-                  {name}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
+        </Reveal>
       </div>
+
+      <Reveal className="mt-12 flex flex-col gap-4 sm:mt-14 sm:gap-5">
+        <LogoRow items={rowA} direction="normal" />
+        <LogoRow items={rowB} direction="reverse" />
+      </Reveal>
     </section>
+  );
+}
+
+function LogoRow({
+  items,
+  direction,
+}: {
+  items: Partner[];
+  direction: "normal" | "reverse";
+}) {
+  const loop = [...items, ...items];
+  const anim = direction === "reverse" ? "animate-marquee-reverse" : "animate-marquee";
+
+  return (
+    <div className="marquee-row marquee-mask overflow-hidden">
+      <ul className={`flex w-max gap-4 sm:gap-5 ${anim}`}>
+        {loop.map((p, i) => (
+          <li
+            key={`${p.name}-${i}`}
+            className="flex h-20 w-40 shrink-0 items-center justify-center rounded-2xl border border-line bg-white px-6 shadow-soft transition-shadow duration-300 hover:shadow-lift sm:h-24 sm:w-48"
+          >
+            <Image
+              src={p.logo}
+              alt={`Seguradora ${p.name}`}
+              className="max-h-10 max-w-[120px] object-contain sm:max-h-11 sm:max-w-[140px]"
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

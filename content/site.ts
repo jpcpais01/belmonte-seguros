@@ -61,23 +61,3 @@ export const nav = [
   { label: "Contactos", href: "/#contactos" },
 ] as const;
 
-export const stats = [
-  { value: "+30", label: "anos de experiência no setor" },
-  { value: "Todas", label: "as seguradoras a operar em Portugal" },
-  { value: "AON", label: "parceria com um líder mundial" },
-  { value: "1-para-1", label: "um gestor de conta dedicado a si" },
-] as const;
-
-// Placeholder partner insurers (substituir pelos parceiros reais).
-export const partners = [
-  "Fidelidade",
-  "Allianz",
-  "Generali",
-  "Tranquilidade",
-  "AdvanceCare",
-  "Médis",
-  "Ageas",
-  "Zurich",
-  "Lusitania",
-  "Una Seguros",
-] as const;

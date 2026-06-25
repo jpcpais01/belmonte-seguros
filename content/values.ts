@@ -63,6 +63,8 @@ export const about = {
   ],
   mission:
     "Desempenhar um papel ativo na melhoria de vida das pessoas, através de respostas de seguros que minimizam os riscos.",
+  vision:
+    "Ir além das necessidades, melhorando continuamente as nossas ofertas com soluções exclusivas e inovadoras, num mercado global e competitivo.",
   highlights: [
     "Fundada em 2018, em Lisboa",
     "Mais de 30 anos de experiência",
@@ -70,3 +72,33 @@ export const about = {
     "Gestor de conta dedicado",
   ],
 } as const;
+
+/** Percurso da empresa — usado na página Sobre Nós. */
+export const timeline = [
+  {
+    year: "1989",
+    title: "O início",
+    text: "Pedro Belmonte inicia a sua atividade no setor segurador, passando por várias companhias — incluindo o Departamento de Negócio Internacional da GENERALI Portugal.",
+  },
+  {
+    year: "2018",
+    title: "Nasce a Belmonte",
+    text: "A 4 de setembro é constituída a Pedro Belmonte, Unipessoal Lda, para suportar um acordo de parceria com a AON, um dos maiores corretores de seguros do mundo.",
+  },
+  {
+    year: "2019",
+    title: "Consolidação",
+    text: "A empresa estabelece contratos de mediação com todas as seguradoras Vida e Não Vida a operar em Portugal e conclui a consolidação da sua carteira.",
+  },
+] as const;
+
+/** Equipa Belmonte — usada na página Sobre Nós. */
+export const team = [
+  { name: "Pedro Belmonte", role: "Diretor Executivo" },
+  { name: "Dayanne Santos", role: "Gestora Operacional" },
+  { name: "Susana Pinto", role: "Gestora Comercial" },
+  { name: "Patrícia Henriques", role: "Coordenadora Operacional" },
+  { name: "Mónica Pereira", role: "Coordenadora Comercial" },
+  { name: "Tiago Gonçalves", role: "Assistente Operacional" },
+  { name: "Alexandra Ramos", role: "Assistente Comercial" },
+] as const;

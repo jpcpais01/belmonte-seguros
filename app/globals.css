@@ -245,7 +245,14 @@
   to { transform: translateX(-50%); }
 }
 .animate-marquee {
-  animation: marquee 38s linear infinite;
+  animation: marquee 42s linear infinite;
+}
+.animate-marquee-reverse {
+  animation: marquee 48s linear infinite reverse;
+}
+.marquee-row:hover .animate-marquee,
+.marquee-row:hover .animate-marquee-reverse {
+  animation-play-state: paused;
 }
 .marquee-mask {
   -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);

@@ -1,38 +1,41 @@
-import { Check, Quote } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { Quote, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
+import { Button } from "@/components/ui/button";
 import { about } from "@/content/values";
+import teamImg from "@/public/team.jpg";
 
 export function About() {
   return (
     <section id="sobre" className="scroll-mt-24 py-20 sm:py-28">
       <div className="container-page">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Visual */}
+          {/* Visual — team photo */}
           <Reveal className="order-2 lg:order-1">
-            <div className="grain relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-sand via-ivory-deep to-gold-tint p-8 shadow-soft sm:p-10">
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-navy shadow-soft backdrop-blur">
-                <span className="size-1.5 rounded-full bg-gold" />
-                No setor desde 1989
-              </span>
-
-              <div className="relative mt-8">
-                <Quote className="size-9 text-gold/50" />
-                <p className="mt-3 font-display text-3xl leading-snug text-navy sm:text-4xl">
-                  {about.lead}
+            <div className="relative">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] shadow-lift ring-1 ring-navy/10">
+                <Image
+                  src={teamImg}
+                  alt="A equipa da Belmonte Seguros à entrada do escritório, no Parque das Nações"
+                  fill
+                  sizes="(max-width: 1024px) 90vw, 45vw"
+                  placeholder="blur"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/45 via-transparent to-transparent" />
+                <p className="absolute inset-x-0 bottom-0 p-6 text-sm font-medium text-ivory/90">
+                  A nossa equipa · Parque das Nações, Lisboa
                 </p>
               </div>
 
-              <ul className="mt-10 grid gap-3 sm:grid-cols-2">
-                {about.highlights.map((h) => (
-                  <li
-                    key={h}
-                    className="flex items-center gap-2.5 rounded-xl border border-white/60 bg-white/55 px-4 py-3 text-sm font-medium text-navy shadow-sm backdrop-blur"
-                  >
-                    <Check className="size-4 shrink-0 text-teal" />
-                    {h}
-                  </li>
-                ))}
-              </ul>
+              {/* Floating badge */}
+              <div className="absolute -right-3 -top-5 rounded-2xl border border-white/60 bg-white/90 px-5 py-3 text-center shadow-lift backdrop-blur sm:-right-6">
+                <p className="font-display text-3xl leading-none text-navy">+30</p>
+                <p className="mt-1 text-xs font-medium text-muted">
+                  anos no setor
+                </p>
+              </div>
             </div>
           </Reveal>
 
@@ -57,13 +60,24 @@ export function About() {
 
             <Reveal delay={0.1}>
               <figure className="mt-8 rounded-2xl border-l-4 border-gold bg-card p-6 shadow-soft">
-                <figcaption className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">
-                  A nossa missão
+                <figcaption className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-gold">
+                  <Quote className="size-4" />A nossa missão
                 </figcaption>
                 <blockquote className="mt-2 font-display text-lg leading-snug text-navy sm:text-xl">
                   “{about.mission}”
                 </blockquote>
               </figure>
+            </Reveal>
+
+            <Reveal delay={0.15}>
+              <div className="mt-8">
+                <Button asChild variant="primary" size="lg">
+                  <Link href="/sobre-nos">
+                    Conhecer a nossa história
+                    <ArrowRight className="size-4" />
+                  </Link>
+                </Button>
+              </div>
             </Reveal>
           </div>
         </div>

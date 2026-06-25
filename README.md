@@ -61,10 +61,11 @@ lib/                         # cn() helper, icon map, contact zod schema
 All copy and company data live in **`/content`** as typed files — no code changes needed:
 
 - `site.ts` — company name, tagline, **phone, email, addresses, hours, ASF
-  number, social links, navigation, stats, partner insurers**
+  number, social links, navigation**
+- `partners.ts` — partner insurer logos (images in `public/empresas`)
 - `services.ts` — the insurance lines (Vida, Saúde, Automóvel, Casa, …)
 - `solutions.ts` — Particulares & Famílias vs Empresas
-- `values.ts` — values, process steps, and the "Sobre Nós" story
+- `values.ts` — values, process steps, the "Sobre Nós" story, timeline & team
 - `testimonials.ts`, `faq.ts`, `posts.ts`
 
 ## ⚠️ Before going live
@@ -72,8 +73,8 @@ All copy and company data live in **`/content`** as typed files — no code chan
 1. **ASF registration number** — replace the placeholder in
    `content/site.ts` (`asf`). Displaying the real ASF mediator number is a
    **legal requirement** for insurance mediators in Portugal.
-2. **Partner insurers** — the logos in `content/site.ts` (`partners`) are
-   placeholders; swap for the real partners (and ideally real logo images).
+2. **Partner insurers** — logos live in `public/empresas` and are listed in
+   `content/partners.ts`; add or remove to match the real partners.
 3. **Testimonials** — replace the placeholder quotes in `testimonials.ts`.
 4. **Legal pages** — `politica-de-privacidade` and `informacao-legal` contain
    placeholder text; have the final wording reviewed by a professional.

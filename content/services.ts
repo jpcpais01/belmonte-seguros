@@ -5,6 +5,7 @@
 export type Service = {
   slug: string;
   title: string;
+  tag: string;
   icon: string;
   summary: string;
   points: string[];
@@ -15,6 +16,7 @@ export const services: Service[] = [
   {
     slug: "vida",
     title: "Seguro de Vida",
+    tag: "Proteção familiar",
     icon: "HeartPulse",
     summary:
       "Proteja quem mais ama perante imprevistos e doenças graves, com a tranquilidade de quem sabe que a família fica amparada.",
@@ -28,6 +30,7 @@ export const services: Service[] = [
   {
     slug: "saude",
     title: "Seguro de Saúde",
+    tag: "Bem-estar",
     icon: "Stethoscope",
     summary:
       "Acesso rápido a médicos, clínicas e hospitais de qualidade, para si e para a sua família, quando mais precisa.",
@@ -41,6 +44,7 @@ export const services: Service[] = [
   {
     slug: "automovel",
     title: "Seguro Automóvel",
+    tag: "Mobilidade",
     icon: "Car",
     summary:
       "Conduza descansado com assistência em viagem e apoio dedicado em caso de acidente ou avaria, onde quer que esteja.",
@@ -54,6 +58,7 @@ export const services: Service[] = [
   {
     slug: "casa",
     title: "Seguro de Casa",
+    tag: "O seu lar",
     icon: "Home",
     summary:
       "Proteja o seu lar e o seu património — para proprietários, senhorios e inquilinos — contra os imprevistos do dia a dia.",
@@ -67,6 +72,7 @@ export const services: Service[] = [
   {
     slug: "acidentes",
     title: "Acidentes Pessoais",
+    tag: "Segurança",
     icon: "ShieldCheck",
     summary:
       "Um apoio essencial em caso de acidente, que garante estabilidade financeira a si e a quem de si depende.",
@@ -80,6 +86,7 @@ export const services: Service[] = [
   {
     slug: "reforma",
     title: "Reforma & Poupança",
+    tag: "Futuro",
     icon: "PiggyBank",
     summary:
       "Construa o seu futuro com soluções de poupança e reforma pensadas para crescer consigo, ao seu ritmo.",

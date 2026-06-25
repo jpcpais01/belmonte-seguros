@@ -38,10 +38,34 @@ export const icons: Record<string, LucideIcon> = {
 
 export const accentClasses: Record<
   string,
-  { bg: string; text: string; ring: string }
+  { bg: string; text: string; glow: string; border: string; linkHover: string }
 > = {
-  navy: { bg: "bg-navy/10", text: "text-navy", ring: "group-hover:ring-navy/20" },
-  gold: { bg: "bg-gold-tint", text: "text-gold", ring: "group-hover:ring-gold/30" },
-  teal: { bg: "bg-teal/10", text: "text-teal", ring: "group-hover:ring-teal/20" },
-  ocean: { bg: "bg-ocean/10", text: "text-ocean", ring: "group-hover:ring-ocean/20" },
+  navy: {
+    bg: "bg-navy/10",
+    text: "text-navy",
+    glow: "bg-navy/15",
+    border: "group-hover:border-navy/30",
+    linkHover: "group-hover:text-ocean",
+  },
+  gold: {
+    bg: "bg-gold-tint",
+    text: "text-gold",
+    glow: "bg-gold/25",
+    border: "group-hover:border-gold/40",
+    linkHover: "group-hover:text-gold",
+  },
+  teal: {
+    bg: "bg-teal/10",
+    text: "text-teal",
+    glow: "bg-teal/20",
+    border: "group-hover:border-teal/30",
+    linkHover: "group-hover:text-teal",
+  },
+  ocean: {
+    bg: "bg-ocean/10",
+    text: "text-ocean",
+    glow: "bg-ocean/20",
+    border: "group-hover:border-ocean/30",
+    linkHover: "group-hover:text-ocean",
+  },
 };
