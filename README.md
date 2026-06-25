@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Belmonte Seguros — Website
 
-## Getting Started
+Marketing website for **Belmonte Seguros — Seguros e Benefícios**, an independent
+insurance mediation firm in Lisbon (Parque das Nações). Built to feel calm,
+trustworthy and human — *acima de tudo, as pessoas*.
 
-First, run the development server:
+All visible content is in **European Portuguese (pt-PT)**.
+
+## Tech stack
+
+- **Next.js 16** (App Router) + **TypeScript**
+- **Tailwind CSS v4** (CSS-based design tokens)
+- **shadcn/ui-style** primitives on **Radix UI** (accordion, label, slot)
+- **Framer Motion** for tasteful scroll-reveal and micro-interactions
+- **lucide-react** icons + custom inline social icons
+- **react-hook-form** + **zod** for the validated contact form
+- Fonts via `next/font`: **Fraunces** (serif display) + **Inter** (body)
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Other scripts:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build      # production build (also type-checks)
+npm run start      # serve the production build
+npm run lint
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project structure
 
-## Learn More
+```
+app/
+  layout.tsx                 # fonts + SEO metadata
+  page.tsx                   # landing page (composes all sections) + JSON-LD
+  globals.css                # design system: tokens, palette, textures, utilities
+  actions.ts                 # contact-form server action (email placeholder)
+  opengraph-image.tsx        # dynamic 1200×630 social share image
+  icon.svg                   # favicon
+  sitemap.ts / robots.ts
+  politica-de-privacidade/   # legal placeholder page
+  informacao-legal/          # legal placeholder page
+components/
+  sections/                  # Header, Hero, TrustBar, Services, Solutions,
+                             # About, Values, Process, Testimonials, BlogTeaser,
+                             # Faq, Cta, Contact, Footer, ContactForm
+  ui/                        # Button, Accordion, Input, Textarea, Label
+  motion/reveal.tsx          # scroll-reveal wrapper (respects reduced motion)
+  brand/                     # Logo + social icons
+  legal/legal-shell.tsx      # chrome for legal pages
+content/                     # ALL Portuguese copy + company data (edit here)
+lib/                         # cn() helper, icon map, contact zod schema
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Editing content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+All copy and company data live in **`/content`** as typed files — no code changes needed:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `site.ts` — company name, tagline, **phone, email, addresses, hours, ASF
+  number, social links, navigation, stats, partner insurers**
+- `services.ts` — the insurance lines (Vida, Saúde, Automóvel, Casa, …)
+- `solutions.ts` — Particulares & Famílias vs Empresas
+- `values.ts` — values, process steps, and the "Sobre Nós" story
+- `testimonials.ts`, `faq.ts`, `posts.ts`
 
-## Deploy on Vercel
+## ⚠️ Before going live
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **ASF registration number** — replace the placeholder in
+   `content/site.ts` (`asf`). Displaying the real ASF mediator number is a
+   **legal requirement** for insurance mediators in Portugal.
+2. **Partner insurers** — the logos in `content/site.ts` (`partners`) are
+   placeholders; swap for the real partners (and ideally real logo images).
+3. **Testimonials** — replace the placeholder quotes in `testimonials.ts`.
+4. **Legal pages** — `politica-de-privacidade` and `informacao-legal` contain
+   placeholder text; have the final wording reviewed by a professional.
+5. **Facebook URL** — set the real page URL in `site.social.facebook`.
+6. **Production URL** — update `siteUrl` in `app/layout.tsx` and the base URLs
+   in `app/sitemap.ts` / `app/robots.ts` / `app/page.tsx` to the final domain.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contact form / email
+
+The form is fully validated (client + server). Out of the box it logs
+submissions to the server console and shows the user a success message, so
+**nothing breaks without configuration**.
+
+To actually receive emails:
+
+1. `npm install resend`
+2. Create an account at [resend.com](https://resend.com) and verify your domain.
+3. Add environment variables (see `.env.example`):
+   `RESEND_API_KEY` and `CONTACT_TO_EMAIL`.
+4. Uncomment the delivery block in [`app/actions.ts`](app/actions.ts).
+
+## Deploying to Vercel
+
+1. Push this repo to GitHub/GitLab.
+2. Import it in [Vercel](https://vercel.com/new) — it auto-detects Next.js, no
+   config needed.
+3. (Optional) add the email env vars under **Project → Settings → Environment
+   Variables**.
+4. Deploy. ✅
+
+## Accessibility & performance notes
+
+- Mobile-first, responsive across all breakpoints.
+- Respects `prefers-reduced-motion` (animations disable automatically).
+- Semantic HTML, focus-visible states, AA-minded contrast, alt/aria labels.
+- All pages are statically prerendered; the OG image is generated at build time.

@@ -1,26 +1,253 @@
 @import "tailwindcss";
 
+/*
+  Belmonte Seguros — Design System
+  ---------------------------------
+  Mood: trust · calm · competence · warmth · quiet confidence.
+  Palette: deep reassuring navy + warm "old gold" accent + warm ivory neutrals.
+  Type: Fraunces (serif display, gives soul) paired with Inter (clean body sans).
+*/
+
+@theme {
+  /* Brand — deep, reassuring blues (trust anchor) */
+  --color-navy: #0c2740;
+  --color-navy-700: #143352;
+  --color-navy-600: #173f63;
+  --color-navy-500: #2b5d80;
+  --color-ocean: #1d5070;
+  --color-ocean-soft: #5a8aa6;
+
+  /* Warm accent — soft old gold (warmth + soul) */
+  --color-gold: #c0974a;
+  --color-gold-soft: #d8b878;
+  --color-gold-tint: #f3e7cf;
+
+  /* Calm tertiary — muted teal for subtle variety */
+  --color-teal: #2f6f6a;
+  --color-teal-soft: #7faaa4;
+
+  /* Warm neutrals — ivory canvas keeps it human, never cold */
+  --color-ivory: #faf7f1;
+  --color-ivory-deep: #f3ede2;
+  --color-sand: #efe8db;
+  --color-ink: #16242f;
+  --color-ink-soft: #3c4a55;
+  --color-muted: #5f6f7a;
+  --color-line: #e7ddcd;
+
+  /* Semantic tokens */
+  --color-background: var(--color-ivory);
+  --color-foreground: var(--color-ink);
+  --color-card: #ffffff;
+  --color-primary: var(--color-navy);
+  --color-accent: var(--color-gold);
+
+  /* Typography */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+
+  /* Radii — gentle, never sharp */
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.75rem;
+  --radius-3xl: 2.25rem;
+
+  /* Soft, layered shadows for depth */
+  --shadow-soft: 0 1px 2px rgba(12, 39, 64, 0.04),
+    0 8px 24px -12px rgba(12, 39, 64, 0.12);
+  --shadow-lift: 0 2px 4px rgba(12, 39, 64, 0.05),
+    0 18px 40px -16px rgba(12, 39, 64, 0.22);
+  --shadow-glow: 0 24px 60px -24px rgba(192, 151, 74, 0.35);
+
+  /* Easing */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--color-ivory);
+  --foreground: var(--color-ink);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "ss01";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--color-navy);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background-color: var(--color-gold);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Respect users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Page horizontal rhythm — mobile-first */
+  .container-page {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 80rem;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-page {
+      padding-inline: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-page {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  /* Simple readable prose for legal pages */
+  .legal-prose {
+    color: var(--color-ink-soft);
+    line-height: 1.75;
+  }
+  .legal-prose h2 {
+    font-size: 1.4rem;
+    margin-top: 2.25rem;
+    margin-bottom: 0.75rem;
+  }
+  .legal-prose p {
+    margin-bottom: 1rem;
+  }
+  .legal-prose ul {
+    margin: 0 0 1rem 1.1rem;
+    list-style: disc;
+  }
+  .legal-prose li {
+    margin-bottom: 0.4rem;
+  }
+  .legal-prose a {
+    color: var(--color-ocean);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* Small uppercase eyebrow label used above headings */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+  }
+}
+
+/* Subtle film-grain texture — adds warmth/soul without weight */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
+}
+
+/* Soft mesh-gradient blobs for hero / CTA backgrounds */
+.mesh-warm {
+  background:
+    radial-gradient(40rem 28rem at 12% 8%, rgba(192, 151, 74, 0.18), transparent 60%),
+    radial-gradient(34rem 26rem at 92% 18%, rgba(47, 111, 106, 0.14), transparent 60%),
+    radial-gradient(40rem 34rem at 70% 100%, rgba(29, 80, 112, 0.12), transparent 60%);
+}
+
+.mesh-navy {
+  background:
+    radial-gradient(38rem 28rem at 15% 10%, rgba(216, 184, 120, 0.16), transparent 60%),
+    radial-gradient(34rem 30rem at 88% 90%, rgba(127, 170, 164, 0.16), transparent 60%);
+}
+
+/* Animated underline for nav + links */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1.5px;
+  width: 100%;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s var(--ease-out-soft);
+}
+.link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Accordion (Radix) open/close */
+@keyframes accordion-down {
+  from { height: 0; opacity: 0; }
+  to { height: var(--radix-accordion-content-height); opacity: 1; }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); opacity: 1; }
+  to { height: 0; opacity: 0; }
+}
+
+/* Marquee for partner logos */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 38s linear infinite;
+}
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
 }
