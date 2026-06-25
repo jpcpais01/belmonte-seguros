@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { ShieldCheck, Sparkles, ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroImg from "@/public/hero.jpeg";
 
 const trust = [
   "100% imparcial",
@@ -120,47 +122,25 @@ function HeroVisual() {
       transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
       className="relative mx-auto w-full max-w-md lg:max-w-none"
     >
-      {/* Main panel */}
-      <div className="grain relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-navy via-navy-700 to-ocean shadow-lift sm:aspect-[5/5]">
-        <div className="mesh-navy absolute inset-0 opacity-90" />
-        {/* big canopy motif */}
-        <svg
-          viewBox="0 0 200 200"
-          className="absolute left-1/2 top-1/2 size-[78%] -translate-x-1/2 -translate-y-[58%]"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path
-            d="M30 120c0-38.66 31.34-70 70-70s70 31.34 70 70"
-            stroke="var(--color-gold)"
-            strokeOpacity="0.9"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-          <path
-            d="M52 124c0-26.51 21.49-48 48-48s48 21.49 48 48"
-            stroke="var(--color-ocean-soft)"
-            strokeOpacity="0.8"
-            strokeWidth="2.6"
-            strokeLinecap="round"
-          />
-          <path
-            d="M74 128c0-14.36 11.64-26 26-26s26 11.64 26 26"
-            stroke="var(--color-gold-soft)"
-            strokeOpacity="0.7"
-            strokeWidth="2.4"
-            strokeLinecap="round"
-          />
-          <circle cx="100" cy="138" r="6.5" fill="var(--color-ivory)" />
-        </svg>
-
+      {/* Main image */}
+      <div className="relative aspect-square overflow-hidden rounded-[2rem] shadow-lift ring-1 ring-navy/10">
+        <Image
+          src={heroImg}
+          alt="Emblema dourado da Belmonte Seguros"
+          fill
+          priority
+          sizes="(max-width: 1024px) 90vw, 45vw"
+          className="object-cover"
+          placeholder="blur"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/55 via-navy/5 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 p-7">
-          <p className="font-display text-2xl text-ivory">
+          <p className="font-display text-2xl text-ivory drop-shadow">
             A sua tranquilidade,
             <br />
             bem protegida.
           </p>
-          <p className="mt-2 text-sm text-ivory/70">
+          <p className="mt-2 text-sm text-ivory/80">
             Seguros · Saúde · Benefícios · Poupança
           </p>
         </div>

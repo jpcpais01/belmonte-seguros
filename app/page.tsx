@@ -4,7 +4,6 @@ import { TrustBar } from "@/components/sections/trust-bar";
 import { Services } from "@/components/sections/services";
 import { Solutions } from "@/components/sections/solutions";
 import { About } from "@/components/sections/about";
-import { Values } from "@/components/sections/values";
 import { Process } from "@/components/sections/process";
 import { Testimonials } from "@/components/sections/testimonials";
 import { BlogTeaser } from "@/components/sections/blog-teaser";
@@ -48,7 +47,6 @@ export default function Home() {
         <Services />
         <Solutions />
         <About />
-        <Values />
         <Process />
         <Testimonials />
         <BlogTeaser />

@@ -10,12 +10,12 @@
 
 @theme {
   /* Brand — deep, reassuring blues (trust anchor) */
-  --color-navy: #0c2740;
-  --color-navy-700: #143352;
-  --color-navy-600: #173f63;
-  --color-navy-500: #2b5d80;
-  --color-ocean: #1d5070;
-  --color-ocean-soft: #5a8aa6;
+  --color-navy: #1e3360;
+  --color-navy-700: #172749;
+  --color-navy-600: #294079;
+  --color-navy-500: #3a5694;
+  --color-ocean: #2b4d85;
+  --color-ocean-soft: #7d97c6;
 
   /* Warm accent — soft old gold (warmth + soul) */
   --color-gold: #c0974a;
