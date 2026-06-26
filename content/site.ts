@@ -57,7 +57,7 @@ export const nav = [
   { label: "Seguros", href: "/#seguros" },
   { label: "Soluções", href: "/#solucoes" },
   { label: "Sobre Nós", href: "/#sobre" },
-  { label: "Blog", href: "/#blog" },
+  { label: "Notícias", href: "/#blog" },
   { label: "Contactos", href: "/#contactos" },
 ] as const;
 
