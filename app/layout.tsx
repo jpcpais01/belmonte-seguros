@@ -20,7 +20,7 @@ const siteUrl = "https://belmonte-seguros.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Belmonte Seguros — Soluções de seguros à sua medida",
+    default: "Belmonte Seguros - Soluções de seguros à sua medida",
     template: "%s · Belmonte Seguros",
   },
   description:
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
     locale: "pt_PT",
     url: siteUrl,
     siteName: "Belmonte Seguros",
-    title: "Belmonte Seguros — Soluções de seguros à sua medida",
+    title: "Belmonte Seguros - Soluções de seguros à sua medida",
     description:
       "Mediação de seguros independente em Lisboa. Acima de tudo, as pessoas.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Belmonte Seguros — Soluções de seguros à sua medida",
+    title: "Belmonte Seguros - Soluções de seguros à sua medida",
     description:
       "Mediação de seguros independente em Lisboa. Acima de tudo, as pessoas.",
   },

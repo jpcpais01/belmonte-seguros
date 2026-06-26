@@ -11,7 +11,7 @@ export function About() {
     <section id="sobre" className="scroll-mt-24 py-20 sm:py-28">
       <div className="container-page">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Visual — team photo */}
+          {/* Visual - team photo */}
           <Reveal className="order-2 lg:order-1">
             <div className="relative">
               <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] shadow-lift ring-1 ring-navy/10">

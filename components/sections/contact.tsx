@@ -90,7 +90,7 @@ export function Contact() {
             <Reveal>
               <div className="overflow-hidden rounded-2xl border border-line shadow-soft">
                 <iframe
-                  title="Mapa — Belmonte Seguros, Parque das Nações, Lisboa"
+                  title="Mapa - Belmonte Seguros, Parque das Nações, Lisboa"
                   src="https://www.google.com/maps?q=Parque+das+Na%C3%A7%C3%B5es+Lisboa+Porta+do+Mar&output=embed"
                   className="h-72 w-full grayscale-[0.2] sm:h-80"
                   loading="lazy"
@@ -108,7 +108,7 @@ export function Contact() {
                   </h3>
                   <p className="mt-2 max-w-md text-ivory/75">
                     Em poucos minutos, ajudamos a encontrar a solução certa para
-                    si — sem compromisso.
+                    si - sem compromisso.
                   </p>
                   <div className="mt-6">
                     <Button asChild variant="accent" size="lg">

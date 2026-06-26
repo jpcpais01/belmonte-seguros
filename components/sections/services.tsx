@@ -16,7 +16,7 @@ export function Services() {
         <SectionHeading
           eyebrow="Os nossos seguros"
           title="Proteção para cada parte da sua vida"
-          intro="Reunimos as melhores soluções do mercado num só lugar. Escolha o que precisa de proteger — nós tratamos do resto."
+          intro="Reunimos as melhores soluções do mercado num só lugar. Escolha o que precisa de proteger - nós tratamos do resto."
         />
 
         <ServiceGrid />
@@ -46,14 +46,11 @@ function ServiceGrid() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/55 to-navy/30" />
 
-            {/* Top: icon + tag */}
-            <div className="relative z-10 flex items-start justify-between">
+            {/* Top: icon */}
+            <div className="relative z-10">
               <div className="grid size-12 place-items-center rounded-2xl bg-white/15 text-gold-soft ring-1 ring-white/20 backdrop-blur-md">
                 {Icon && <Icon className="size-6" strokeWidth={1.7} />}
               </div>
-              <span className="rounded-full bg-white/15 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-gold-soft ring-1 ring-white/15 backdrop-blur-md">
-                {s.tag}
-              </span>
             </div>
 
             {/* Bottom: title + summary + CTA */}

@@ -16,7 +16,7 @@ export function Solutions() {
       <div className="container-page">
         <SectionHeading
           eyebrow="Soluções por perfil"
-          title="Pensadas para si — e para o seu negócio"
+          title="Pensadas para si - e para o seu negócio"
           intro="Quer proteja a sua família ou lidere uma empresa, desenhamos a combinação certa de seguros e benefícios para cada realidade."
         />
 

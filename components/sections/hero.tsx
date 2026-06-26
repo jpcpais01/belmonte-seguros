@@ -23,7 +23,7 @@ export function Hero() {
       id="inicio"
       className="relative flex min-h-[92svh] items-center overflow-hidden"
     >
-      {/* Video background — shows plain white while it loads (no poster image) */}
+      {/* Video background - shows plain white while it loads (no poster image) */}
       <div className="absolute inset-0 bg-white" />
       <video
         className="absolute inset-0 size-full object-cover"
@@ -37,7 +37,7 @@ export function Hero() {
         <source src="/hero-background.mp4" type="video/mp4" />
       </video>
 
-      {/* Subtle overlay — keeps the video almost fully visible */}
+      {/* Subtle overlay - keeps the video almost fully visible */}
       <div className="absolute inset-0 bg-black/10" />
 
       <div className="container-page relative z-10 pt-28 pb-20 sm:pt-32 sm:pb-24">
@@ -65,7 +65,7 @@ export function Hero() {
             {...fade(0.16)}
             className="mt-6 max-w-xl text-lg leading-relaxed text-ivory/85"
           >
-            Soluções de seguros à sua medida — para si, para a sua família e
+            Soluções de seguros à sua medida - para si, para a sua família e
             para a sua empresa. Comparamos as melhores opções de todas as
             seguradoras a operar em Portugal, com aconselhamento próximo e
             imparcial.

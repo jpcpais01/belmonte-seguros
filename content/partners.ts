@@ -15,23 +15,26 @@ import tranquilidade from "@/public/empresas/tranquilidade.png";
 import victoria from "@/public/empresas/victoria.png";
 import zurich from "@/public/empresas/zurich.png";
 
-export type Partner = { name: string; logo: StaticImageData };
+export type Partner = { name: string; logo: StaticImageData; scale: number };
 
-/** Seguradoras parceiras — logos em public/empresas. */
+/**
+ * Seguradoras parceiras - logos em public/empresas.
+ * `scale` amplia logótipos com muito espaço em branco para um tamanho visual uniforme.
+ */
 export const partners: Partner[] = [
-  { name: "Fidelidade", logo: fidelidade },
-  { name: "Generali", logo: generali },
-  { name: "Allianz", logo: allianz },
-  { name: "Ageas", logo: ageas },
-  { name: "Tranquilidade", logo: tranquilidade },
-  { name: "Zurich", logo: zurich },
-  { name: "Victoria", logo: victoria },
-  { name: "Médis", logo: medis },
-  { name: "AdvanceCare", logo: advancecare },
-  { name: "Real Vida Seguros", logo: realvida },
-  { name: "AIG", logo: aig },
-  { name: "HDI", logo: hdi },
-  { name: "Hiscox", logo: hiscox },
-  { name: "QBE", logo: qbe },
-  { name: "ERGO", logo: ergo },
+  { name: "Fidelidade", logo: fidelidade, scale: 1 },
+  { name: "Generali", logo: generali, scale: 2 },
+  { name: "Allianz", logo: allianz, scale: 2 },
+  { name: "Ageas", logo: ageas, scale: 3 },
+  { name: "Tranquilidade", logo: tranquilidade, scale: 2 },
+  { name: "Zurich", logo: zurich, scale: 2 },
+  { name: "Victoria", logo: victoria, scale: 2 },
+  { name: "Médis", logo: medis, scale: 2 },
+  { name: "AdvanceCare", logo: advancecare, scale: 2 },
+  { name: "Real Vida Seguros", logo: realvida, scale: 2 },
+  { name: "AIG", logo: aig, scale: 2 },
+  { name: "HDI", logo: hdi, scale: 1.5 },
+  { name: "Hiscox", logo: hiscox, scale: 2 },
+  { name: "QBE", logo: qbe, scale: 3 },
+  { name: "ERGO", logo: ergo, scale: 2 },
 ];

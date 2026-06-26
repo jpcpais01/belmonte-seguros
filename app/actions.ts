@@ -47,8 +47,8 @@ export async function submitContact(data: unknown): Promise<ContactState> {
     //   from: "Website Belmonte <site@belmonte-seguros.pt>",
     //   to: process.env.CONTACT_TO_EMAIL ?? "geral@belmonte-seguros.pt",
     //   replyTo: email,
-    //   subject: `Novo pedido de contacto — ${subject}`,
-    //   text: `Nome: ${name}\nEmail: ${email}\nTelefone: ${phone || "—"}\n\n${message}`,
+    //   subject: `Novo pedido de contacto - ${subject}`,
+    //   text: `Nome: ${name}\nEmail: ${email}\nTelefone: ${phone || "-"}\n\n${message}`,
     // });
     // --------------------------------------------------------------------
 

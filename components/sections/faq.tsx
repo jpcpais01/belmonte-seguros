@@ -20,7 +20,7 @@ export function Faq() {
               align="left"
               eyebrow="Perguntas frequentes"
               title="As suas dúvidas, esclarecidas"
-              intro="Não encontra a resposta que procura? Fale connosco — estamos a um telefonema de distância."
+              intro="Não encontra a resposta que procura? Fale connosco - estamos a um telefonema de distância."
             />
             <Reveal className="mt-8">
               <Button asChild variant="primary" size="md">

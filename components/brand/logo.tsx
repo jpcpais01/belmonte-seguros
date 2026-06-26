@@ -10,14 +10,14 @@ type LogoProps = {
 };
 
 /**
- * Belmonte Seguros logo — gold "CB" monogram with "Seguros & Benefícios".
+ * Belmonte Seguros logo - gold "CB" monogram with "Seguros & Benefícios".
  * Transparent PNG, so it sits cleanly on both light and navy backgrounds.
  */
 export function Logo({ className, priority }: LogoProps) {
   return (
     <Image
       src={logoImg}
-      alt="Belmonte Seguros — Seguros & Benefícios"
+      alt="Belmonte Seguros - Seguros & Benefícios"
       priority={priority}
       sizes="220px"
       className={cn("h-10 w-auto sm:h-11", className)}

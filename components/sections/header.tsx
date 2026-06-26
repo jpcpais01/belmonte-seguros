@@ -50,7 +50,7 @@ export function Header() {
         )}
       >
         <div className="container-page flex h-18 items-center justify-between py-3">
-          <Link href="/" aria-label="Belmonte Seguros — início" className="py-1">
+          <Link href="/" aria-label="Belmonte Seguros - início" className="py-1">
             <Logo priority />
           </Link>
 

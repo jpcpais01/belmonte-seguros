@@ -22,7 +22,7 @@ export const solutions: Solution[] = [
     eyebrow: "Para si e para a sua família",
     title: "Particulares & Famílias",
     description:
-      "Aconselhamento próximo e imparcial para proteger o que constrói ao longo da vida — as pessoas, a casa, o carro e os seus projetos.",
+      "Aconselhamento próximo e imparcial para proteger o que constrói ao longo da vida - as pessoas, a casa, o carro e os seus projetos.",
     icon: "Users",
     image:
       "https://images.unsplash.com/photo-1476703993599-0035a21b17a9?auto=format&fit=crop&w=1200&q=80",

@@ -1,4 +1,4 @@
-/** Blog / Notícias — articles with Unsplash covers and body content. */
+/** Blog / Notícias - articles with Unsplash covers and body content. */
 
 export type Block =
   | { type: "h2"; text: string }
@@ -59,7 +59,7 @@ export const posts: Post[] = [
       },
       {
         type: "p",
-        text: "São os prazos que tem de aguardar até poder usar determinada cobertura. Conhecê-los à partida evita surpresas — sobretudo em situações planeadas, como um parto ou uma cirurgia.",
+        text: "São os prazos que tem de aguardar até poder usar determinada cobertura. Conhecê-los à partida evita surpresas - sobretudo em situações planeadas, como um parto ou uma cirurgia.",
       },
       {
         type: "p",
@@ -72,7 +72,7 @@ export const posts: Post[] = [
     category: "Poupança",
     title: "PPR: vale mesmo a pena para a sua reforma?",
     excerpt:
-      "Vantagens fiscais, flexibilidade e horizonte temporal — tudo o que precisa de saber sobre Planos Poupança Reforma.",
+      "Vantagens fiscais, flexibilidade e horizonte temporal - tudo o que precisa de saber sobre Planos Poupança Reforma.",
     date: "2026-04-30",
     readingTime: "6 min",
     author: "Equipa Belmonte",
@@ -81,7 +81,7 @@ export const posts: Post[] = [
     body: [
       {
         type: "p",
-        text: "O Plano Poupança Reforma (PPR) é um dos instrumentos de poupança mais populares em Portugal — e por boas razões. Mas será que faz sentido para si? Vamos por partes.",
+        text: "O Plano Poupança Reforma (PPR) é um dos instrumentos de poupança mais populares em Portugal - e por boas razões. Mas será que faz sentido para si? Vamos por partes.",
       },
       {
         type: "h2",
@@ -118,7 +118,7 @@ export const posts: Post[] = [
     category: "Dicas",
     title: "Porque deve rever os seus seguros uma vez por ano",
     excerpt:
-      "A vida muda — e as suas apólices devem acompanhar. Um pequeno hábito que pode poupar-lhe dinheiro e dores de cabeça.",
+      "A vida muda - e as suas apólices devem acompanhar. Um pequeno hábito que pode poupar-lhe dinheiro e dores de cabeça.",
     date: "2026-04-08",
     readingTime: "4 min",
     author: "Equipa Belmonte",
@@ -131,7 +131,7 @@ export const posts: Post[] = [
       },
       {
         type: "h2",
-        text: "A sua vida mudou — os seguros também devem mudar",
+        text: "A sua vida mudou - os seguros também devem mudar",
       },
       {
         type: "p",
@@ -143,7 +143,7 @@ export const posts: Post[] = [
       },
       {
         type: "p",
-        text: "Com o tempo, é comum acumular coberturas que já não usa — ou, pior, descobrir lacunas só no momento do sinistro. Rever as apólices permite eliminar duplicações e reforçar o que realmente importa.",
+        text: "Com o tempo, é comum acumular coberturas que já não usa - ou, pior, descobrir lacunas só no momento do sinistro. Rever as apólices permite eliminar duplicações e reforçar o que realmente importa.",
       },
       {
         type: "p",
@@ -165,7 +165,7 @@ export const posts: Post[] = [
     body: [
       {
         type: "p",
-        text: "O seguro automóvel é obrigatório, mas nem todos são iguais. Conhecer as coberturas ajuda-o a conduzir mais descansado — e a evitar surpresas em caso de acidente.",
+        text: "O seguro automóvel é obrigatório, mas nem todos são iguais. Conhecer as coberturas ajuda-o a conduzir mais descansado - e a evitar surpresas em caso de acidente.",
       },
       {
         type: "h2",
@@ -181,7 +181,7 @@ export const posts: Post[] = [
       },
       {
         type: "p",
-        text: "Inclui coberturas como choque, colisão e capotamento, furto, incêndio e fenómenos da natureza. Faz sentido sobretudo em viaturas mais recentes ou de maior valor. Atenção às franquias — o valor que fica a seu cargo em cada sinistro.",
+        text: "Inclui coberturas como choque, colisão e capotamento, furto, incêndio e fenómenos da natureza. Faz sentido sobretudo em viaturas mais recentes ou de maior valor. Atenção às franquias - o valor que fica a seu cargo em cada sinistro.",
       },
       {
         type: "h2",
@@ -211,7 +211,7 @@ export const posts: Post[] = [
     body: [
       {
         type: "p",
-        text: "A casa é, para a maioria das pessoas, o bem mais valioso — e o que guarda as memórias de uma vida. Um bom seguro de habitação protege as duas coisas: a estrutura e o que existe lá dentro.",
+        text: "A casa é, para a maioria das pessoas, o bem mais valioso - e o que guarda as memórias de uma vida. Um bom seguro de habitação protege as duas coisas: a estrutura e o que existe lá dentro.",
       },
       {
         type: "h2",
@@ -219,7 +219,7 @@ export const posts: Post[] = [
       },
       {
         type: "p",
-        text: "A cobertura de edifício protege a construção em si (paredes, instalações, estruturas). A de recheio cobre os seus bens — móveis, eletrodomésticos, roupa e objetos pessoais. Se é proprietário, idealmente precisa de ambas; se é inquilino, normalmente basta o recheio.",
+        text: "A cobertura de edifício protege a construção em si (paredes, instalações, estruturas). A de recheio cobre os seus bens - móveis, eletrodomésticos, roupa e objetos pessoais. Se é proprietário, idealmente precisa de ambas; se é inquilino, normalmente basta o recheio.",
       },
       {
         type: "h2",
@@ -227,7 +227,7 @@ export const posts: Post[] = [
       },
       {
         type: "p",
-        text: "Um seguro completo vai muito além do fogo: inclui danos por água, fenómenos naturais, furto, quebra de vidros e responsabilidade civil — por exemplo, se uma fuga de água em sua casa afetar o vizinho.",
+        text: "Um seguro completo vai muito além do fogo: inclui danos por água, fenómenos naturais, furto, quebra de vidros e responsabilidade civil - por exemplo, se uma fuga de água em sua casa afetar o vizinho.",
       },
       {
         type: "h2",
@@ -265,7 +265,7 @@ export const posts: Post[] = [
       },
       {
         type: "p",
-        text: "Sempre que há pessoas que dependem de si — filhos, cônjuge — ou compromissos de longo prazo, como um crédito habitação. Nestes casos, o seguro de vida deixa de ser um extra e passa a ser um pilar de proteção.",
+        text: "Sempre que há pessoas que dependem de si - filhos, cônjuge - ou compromissos de longo prazo, como um crédito habitação. Nestes casos, o seguro de vida deixa de ser um extra e passa a ser um pilar de proteção.",
       },
       {
         type: "h2",

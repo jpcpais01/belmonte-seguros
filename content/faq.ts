@@ -18,7 +18,7 @@ export const faqs = [
   {
     question: "O que é um gestor de conta dedicado?",
     answer:
-      "É uma pessoa de referência que conhece o seu caso e o acompanha ao longo do tempo — na contratação, na gestão das apólices e, sobretudo, no apoio em caso de sinistro.",
+      "É uma pessoa de referência que conhece o seu caso e o acompanha ao longo do tempo - na contratação, na gestão das apólices e, sobretudo, no apoio em caso de sinistro.",
   },
   {
     question: "Também tratam de seguros para empresas?",

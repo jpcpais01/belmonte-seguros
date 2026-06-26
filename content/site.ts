@@ -5,7 +5,7 @@
 
 export const site = {
   name: "Belmonte Seguros",
-  legalName: "Belmonte Seguros — Seguros e Benefícios",
+  legalName: "Belmonte Seguros - Seguros e Benefícios",
   tagline: "Acima de tudo, as pessoas.",
   subtitle: "Soluções de seguros à sua medida.",
   description:
@@ -16,7 +16,7 @@ export const site = {
   email: "geral@belmonte-seguros.pt",
   emailHref: "mailto:geral@belmonte-seguros.pt",
 
-  hours: "Segunda a Sexta, 9h00 — 18h00",
+  hours: "Segunda a Sexta, 9h00 - 18h00",
 
   // Note: substituir pelo número real de registo na ASF antes de publicar.
   asf: "Mediador registado na ASF sob o n.º 0000000000",

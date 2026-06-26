@@ -44,7 +44,7 @@ export function Process() {
 
         <Reveal className="mt-14 flex justify-center" delay={0.1}>
           <Button asChild variant="primary" size="lg">
-            <Link href="/simulacao">Começar agora — é gratuito</Link>
+            <Link href="/simulacao">Começar agora - é gratuito</Link>
           </Button>
         </Reveal>
       </div>

@@ -139,13 +139,13 @@ export const services: Service[] = [
     tag: "O seu lar",
     icon: "Home",
     summary:
-      "Proteja o seu lar e o seu património — para proprietários, senhorios e inquilinos — contra os imprevistos do dia a dia.",
+      "Proteja o seu lar e o seu património - para proprietários, senhorios e inquilinos - contra os imprevistos do dia a dia.",
     image: img("1568605114967-8130f3a36994"),
     imageAlt: "Casa acolhedora ao final do dia",
     accent: "navy",
     detail: {
       intro:
-        "Proteja o seu lar e o seu património — para proprietários, senhorios e inquilinos — contra os imprevistos do dia a dia.",
+        "Proteja o seu lar e o seu património - para proprietários, senhorios e inquilinos - contra os imprevistos do dia a dia.",
       note: "Disponível em 5 planos (I a V).",
       groups: [
         {

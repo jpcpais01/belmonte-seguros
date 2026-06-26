@@ -26,7 +26,7 @@ export default function BlogIndexPage() {
                 Conselhos para decidir com clareza
               </h1>
               <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-soft">
-                Seguros, saúde e poupança explicados de forma simples — para o
+                Seguros, saúde e poupança explicados de forma simples - para o
                 ajudar a proteger melhor o que é importante para si.
               </p>
             </Reveal>

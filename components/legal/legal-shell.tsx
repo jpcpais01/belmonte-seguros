@@ -17,7 +17,7 @@ export function LegalShell({
     <>
       <header className="border-b border-line/70 bg-ivory/80 backdrop-blur-xl">
         <div className="container-page flex h-18 items-center justify-between">
-          <Link href="/" aria-label="Belmonte Seguros — início">
+          <Link href="/" aria-label="Belmonte Seguros - início">
             <Logo />
           </Link>
           <Button asChild variant="outline" size="sm">

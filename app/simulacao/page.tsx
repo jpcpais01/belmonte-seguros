@@ -45,7 +45,7 @@ export default function SimulacaoPage() {
               </h1>
               <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-soft">
                 Conte-nos o que precisa de proteger. Em poucos minutos,
-                preparamos uma proposta à sua medida — sem custos e sem
+                preparamos uma proposta à sua medida - sem custos e sem
                 compromisso.
               </p>
             </Reveal>

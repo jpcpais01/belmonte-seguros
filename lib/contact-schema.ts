@@ -31,7 +31,7 @@ export const contactSchema = z.object({
   consent: z
     .boolean()
     .refine((v) => v === true, "É necessário aceitar a Política de Privacidade."),
-  // Honeypot — deve ficar sempre vazio (anti-spam).
+  // Honeypot - deve ficar sempre vazio (anti-spam).
   company: z.string().max(0).optional(),
 });
 

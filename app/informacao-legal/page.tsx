@@ -13,7 +13,7 @@ export default function LegalPage() {
     <LegalShell title="Informação Legal" updatedAt="junho de 2026">
       <p>
         A {site.legalName} exerce a atividade de mediação de seguros nos termos
-        da legislação em vigor, sob a supervisão da ASF — Autoridade de
+        da legislação em vigor, sob a supervisão da ASF - Autoridade de
         Supervisão de Seguros e Fundos de Pensões.
       </p>
 

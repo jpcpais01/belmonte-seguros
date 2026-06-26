@@ -41,11 +41,12 @@ function LogoRow({
         {loop.map((p, i) => (
           <li
             key={`${p.name}-${i}`}
-            className="flex h-28 w-52 shrink-0 items-center justify-center rounded-2xl border border-line bg-white px-8 shadow-soft transition-shadow duration-300 hover:shadow-lift sm:h-32 sm:w-64"
+            className="flex h-32 w-60 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-line bg-white px-6 shadow-soft transition-shadow duration-300 hover:shadow-lift sm:h-36 sm:w-72"
           >
             <Image
               src={p.logo}
               alt={`Seguradora ${p.name}`}
+              style={{ transform: `scale(${p.scale})` }}
               className="max-h-15 max-w-[170px] object-contain sm:max-h-16 sm:max-w-[200px]"
             />
           </li>

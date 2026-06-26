@@ -10,7 +10,7 @@ export type FamilyType = {
   imageAlt: string;
 };
 
-/** Particulares & Famílias — 6 insurance types (from tipo/familia). */
+/** Particulares & Famílias - 6 insurance types (from tipo/familia). */
 export const particularesTypes: FamilyType[] = [
   {
     title: "Multirrisco Imóvel",
@@ -57,7 +57,7 @@ export const particularesTypes: FamilyType[] = [
 ];
 
 export const particularesIntro =
-  "Da casa ao recheio, das rendas à proteção de quem trabalha consigo — reunimos as soluções certas para proteger a sua família e o seu património.";
+  "Da casa ao recheio, das rendas à proteção de quem trabalha consigo - reunimos as soluções certas para proteger a sua família e o seu património.";
 
 /** Empresas (from tipo/empresas). */
 export const empresas = {

@@ -57,7 +57,7 @@ export const about = {
   title: "Uma equipa que coloca as pessoas em primeiro lugar.",
   lead: "Acima de tudo, as pessoas.",
   paragraphs: [
-    "A Belmonte Seguros nasceu em 2018, fundada por Pedro Belmonte, cuja carreira no setor segurador começou em 1989 — incluindo passagem pelo Departamento de Negócio Internacional da GENERALI Portugal.",
+    "A Belmonte Seguros nasceu em 2018, fundada por Pedro Belmonte, cuja carreira no setor segurador começou em 1989 - incluindo passagem pelo Departamento de Negócio Internacional da GENERALI Portugal.",
     "Trabalhamos em parceria com a AON, um dos maiores corretores de seguros do mundo, e dispomos de contratos de mediação com todas as seguradoras a operar em Portugal. Isso significa total imparcialidade: aconselhamos a solução certa para si, não a de uma marca.",
     "Somos uma equipa jovem e dinâmica que oferece um serviço profissional e personalizado. Cada cliente tem um gestor de conta dedicado, disponível para o apoiar em todas as suas necessidades.",
   ],
@@ -73,12 +73,12 @@ export const about = {
   ],
 } as const;
 
-/** Percurso da empresa — usado na página Sobre Nós. */
+/** Percurso da empresa - usado na página Sobre Nós. */
 export const timeline = [
   {
     year: "1989",
     title: "O início",
-    text: "Pedro Belmonte inicia a sua atividade no setor segurador, passando por várias companhias — incluindo o Departamento de Negócio Internacional da GENERALI Portugal.",
+    text: "Pedro Belmonte inicia a sua atividade no setor segurador, passando por várias companhias - incluindo o Departamento de Negócio Internacional da GENERALI Portugal.",
   },
   {
     year: "2018",
@@ -92,7 +92,7 @@ export const timeline = [
   },
 ] as const;
 
-/** Equipa Belmonte — usada na página Sobre Nós. */
+/** Equipa Belmonte - usada na página Sobre Nós. */
 export const team = [
   { name: "Pedro Belmonte", role: "Diretor Executivo", photo: "/workers/pedro.jpg" },
   { name: "Dayanne Santos", role: "Gestora Operacional", photo: "/workers/dayane.jpg" },

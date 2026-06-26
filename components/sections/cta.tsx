@@ -36,7 +36,7 @@ export function Cta() {
               </h2>
               <p className="mx-auto mt-5 max-w-xl text-lg text-ivory/75">
                 Fale com a nossa equipa hoje. Em poucos minutos, ajudamos a
-                encontrar a solução certa — com a tranquilidade de quem está
+                encontrar a solução certa - com a tranquilidade de quem está
                 sempre do seu lado.
               </p>
 
