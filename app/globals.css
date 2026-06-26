@@ -17,10 +17,10 @@
   --color-ocean: #2b4d85;
   --color-ocean-soft: #7d97c6;
 
-  /* Warm accent — soft old gold (warmth + soul) */
-  --color-gold: #c0974a;
-  --color-gold-soft: #d8b878;
-  --color-gold-tint: #f3e7cf;
+  /* Warm accent — gold */
+  --color-gold: #da9439;
+  --color-gold-soft: #e8b46a;
+  --color-gold-tint: #faf0dc;
 
   /* Calm tertiary — muted teal for subtle variety */
   --color-teal: #2f6f6a;
