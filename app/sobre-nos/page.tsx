@@ -25,21 +25,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/sobre-nos" },
 };
 
-const avatarStyles = [
-  "bg-gold-tint text-gold",
-  "bg-ocean/10 text-ocean",
-  "bg-teal/10 text-teal",
-  "bg-navy/10 text-navy",
-];
-
-function initials(name: string) {
-  return name
-    .split(" ")
-    .map((w) => w[0])
-    .slice(0, 2)
-    .join("");
-}
-
 export default function SobreNosPage() {
   return (
     <>
@@ -227,14 +212,20 @@ export default function SobreNosPage() {
             <div className="mt-12 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
               {team.map((member, i) => (
                 <Reveal as="div" key={member.name} delay={(i % 4) * 0.06}>
-                  <div className="flex h-full flex-col items-center rounded-3xl border border-line bg-card p-6 text-center shadow-soft">
-                    <div
-                      className={`grid size-16 place-items-center rounded-full font-display text-xl ${avatarStyles[i % avatarStyles.length]}`}
-                    >
-                      {initials(member.name)}
+                  <div className="group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-card shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-lift">
+                    <div className="relative aspect-square overflow-hidden">
+                      <Image
+                        src={member.photo}
+                        alt={`${member.name}, ${member.role} na Belmonte Seguros`}
+                        fill
+                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
                     </div>
-                    <p className="mt-4 font-semibold text-navy">{member.name}</p>
-                    <p className="mt-1 text-sm text-muted">{member.role}</p>
+                    <div className="p-5 text-center">
+                      <p className="font-semibold text-navy">{member.name}</p>
+                      <p className="mt-1 text-sm text-muted">{member.role}</p>
+                    </div>
                   </div>
                 </Reveal>
               ))}

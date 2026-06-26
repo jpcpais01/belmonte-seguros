@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, ShieldCheck } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import {
   InstagramIcon,
   LinkedinIcon,
@@ -88,26 +88,9 @@ export function Footer() {
           </FooterCol>
         </div>
 
-        {/* Legal / compliance */}
+        {/* Legal */}
         <div className="mt-14 border-t border-white/10 pt-8">
-          <div className="flex items-start gap-2.5 rounded-xl border border-white/10 bg-white/[0.03] p-4 text-xs leading-relaxed text-ivory/55">
-            <ShieldCheck className="mt-0.5 size-4 shrink-0 text-gold-soft" />
-            <p>
-              {site.legalName}. {site.asf}. A atividade de mediação de seguros é
-              supervisionada pela{" "}
-              <a
-                href={site.asfUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline decoration-gold-soft/50 underline-offset-2 hover:text-gold-soft"
-              >
-                ASF — Autoridade de Supervisão de Seguros e Fundos de Pensões
-              </a>
-              .
-            </p>
-          </div>
-
-          <div className="mt-6 flex flex-col items-center justify-between gap-4 text-xs text-ivory/55 sm:flex-row">
+          <div className="flex flex-col items-center justify-between gap-4 text-xs text-ivory/55 sm:flex-row">
             <p>
               © {year} {site.legalName}. Todos os direitos reservados.
             </p>

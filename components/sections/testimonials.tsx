@@ -3,6 +3,16 @@ import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { testimonials } from "@/content/testimonials";
 
+function Stars({ count }: { count: number }) {
+  return (
+    <div className="flex items-center gap-1 text-gold-soft">
+      {Array.from({ length: count }).map((_, i) => (
+        <Star key={i} className="size-4 fill-current sm:size-[18px]" />
+      ))}
+    </div>
+  );
+}
+
 export function Testimonials() {
   return (
     <section className="grain relative overflow-hidden bg-gradient-to-br from-navy via-navy-700 to-ocean py-20 sm:py-28">
@@ -15,33 +25,26 @@ export function Testimonials() {
           intro="O que conta para nós é o que sentem as pessoas que acompanhamos todos os dias."
         />
 
-        <div className="mt-14 grid gap-5 md:grid-cols-2">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((t, i) => (
             <Reveal key={t.name} delay={i * 0.08}>
-              <figure className="flex h-full flex-col rounded-3xl border border-white/12 bg-white/[0.06] p-7 shadow-soft backdrop-blur-md sm:p-8">
-                <div className="flex items-center gap-1 text-gold-soft">
-                  {Array.from({ length: 5 }).map((_, s) => (
-                    <Star key={s} className="size-4 fill-current" />
-                  ))}
-                </div>
-                <blockquote className="mt-4 flex-1 text-lg leading-relaxed text-ivory/90">
-                  “{t.quote}”
-                </blockquote>
-                <figcaption className="mt-6 flex items-center gap-3 border-t border-white/10 pt-5">
-                  <span className="grid size-11 place-items-center rounded-full bg-gold-tint font-display text-base text-navy">
-                    {t.name
-                      .split(" ")
-                      .map((w) => w[0])
-                      .slice(0, 2)
-                      .join("")}
-                  </span>
-                  <span className="leading-tight">
-                    <span className="block text-sm font-semibold text-ivory">
+              <figure className="flex h-full min-h-52 flex-col rounded-3xl border border-white/12 bg-white/[0.06] p-7 shadow-soft backdrop-blur-md sm:p-8">
+                {t.quote ? (
+                  <>
+                    <Stars count={t.stars} />
+                    <blockquote className="mt-4 flex-1 text-lg leading-relaxed text-ivory/90">
+                      “{t.quote}”
+                    </blockquote>
+                    <figcaption className="mt-6 border-t border-white/10 pt-5 text-sm font-semibold text-ivory">
                       {t.name}
-                    </span>
-                    <span className="block text-xs text-ivory/60">{t.role}</span>
-                  </span>
-                </figcaption>
+                    </figcaption>
+                  </>
+                ) : (
+                  <div className="flex flex-1 flex-col items-center justify-center gap-4 py-6 text-center">
+                    <Stars count={t.stars} />
+                    <p className="text-base font-semibold text-ivory">{t.name}</p>
+                  </div>
+                )}
               </figure>
             </Reveal>
           ))}

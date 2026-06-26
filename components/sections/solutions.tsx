@@ -1,10 +1,10 @@
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { Button } from "@/components/ui/button";
 import { solutions } from "@/content/solutions";
 import { icons } from "@/lib/icons";
-import { cn } from "@/lib/utils";
 
 export function Solutions() {
   return (
@@ -22,74 +22,46 @@ export function Solutions() {
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
           {solutions.map((sol, i) => {
             const Icon = icons[sol.icon];
-            const dark = sol.id === "empresas";
             return (
               <Reveal as="article" key={sol.id} delay={i * 0.1}>
-                <div
-                  className={cn(
-                    "relative flex h-full flex-col overflow-hidden rounded-[2rem] border p-8 shadow-soft transition-shadow duration-500 hover:shadow-lift sm:p-10",
-                    dark
-                      ? "grain border-navy-700 bg-gradient-to-br from-navy via-navy-700 to-ocean text-ivory"
-                      : "border-line bg-card"
-                  )}
-                >
-                  {dark && <div className="mesh-navy absolute inset-0 opacity-80" />}
+                <div className="grain relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-navy-700 p-8 text-ivory shadow-soft transition-shadow duration-500 hover:shadow-lift sm:p-10">
+                  {/* Background photo */}
+                  <Image
+                    src={sol.image}
+                    alt={sol.imageAlt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/88 to-navy/68" />
+                  <div className="mesh-navy absolute inset-0 opacity-40" />
+
                   <div className="relative z-10 flex h-full flex-col">
-                    <div
-                      className={cn(
-                        "grid size-14 place-items-center rounded-2xl",
-                        dark ? "bg-white/10 text-gold-soft" : "bg-gold-tint text-gold"
-                      )}
-                    >
+                    <div className="grid size-14 place-items-center rounded-2xl bg-white/10 text-gold-soft backdrop-blur-sm">
                       {Icon && <Icon className="size-7" strokeWidth={1.6} />}
                     </div>
 
-                    <p
-                      className={cn(
-                        "mt-6 text-xs font-semibold uppercase tracking-[0.16em]",
-                        dark ? "text-gold-soft" : "text-gold"
-                      )}
-                    >
+                    <p className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-gold-soft">
                       {sol.eyebrow}
                     </p>
-                    <h3
-                      className={cn(
-                        "mt-2 text-2xl sm:text-3xl",
-                        dark && "text-ivory"
-                      )}
-                    >
+                    <h3 className="mt-2 text-2xl text-ivory sm:text-3xl">
                       {sol.title}
                     </h3>
-                    <p
-                      className={cn(
-                        "mt-3 max-w-md text-[15px] leading-relaxed",
-                        dark ? "text-ivory/75" : "text-ink-soft"
-                      )}
-                    >
+                    <p className="mt-3 max-w-md text-[15px] leading-relaxed text-ivory/80">
                       {sol.description}
                     </p>
 
                     <div className="mt-7 grid gap-6 sm:grid-cols-2">
                       {sol.offerings.map((off) => (
                         <div key={off.title}>
-                          <p
-                            className={cn(
-                              "text-sm font-semibold",
-                              dark ? "text-ivory" : "text-navy"
-                            )}
-                          >
+                          <p className="text-sm font-semibold text-ivory">
                             {off.title}
                           </p>
                           <ul className="mt-3 flex flex-wrap gap-2">
                             {off.items.map((it) => (
                               <li
                                 key={it}
-                                className={cn(
-                                  "rounded-full border px-3 py-1 text-xs font-medium",
-                                  dark
-                                    ? "border-white/15 bg-white/5 text-ivory/85"
-                                    : "border-line bg-ivory text-ink-soft"
-                                )}
+                                className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium text-ivory/90 backdrop-blur-sm"
                               >
                                 {it}
                               </li>
@@ -100,11 +72,7 @@ export function Solutions() {
                     </div>
 
                     <div className="mt-8 pt-2">
-                      <Button
-                        asChild
-                        variant={dark ? "accent" : "primary"}
-                        size="md"
-                      >
+                      <Button asChild variant="accent" size="md">
                         <a href="#contactos">
                           {sol.cta}
                           <ArrowRight className="size-4" />

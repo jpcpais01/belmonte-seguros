@@ -94,11 +94,11 @@ export const timeline = [
 
 /** Equipa Belmonte — usada na página Sobre Nós. */
 export const team = [
-  { name: "Pedro Belmonte", role: "Diretor Executivo" },
-  { name: "Dayanne Santos", role: "Gestora Operacional" },
-  { name: "Susana Pinto", role: "Gestora Comercial" },
-  { name: "Patrícia Henriques", role: "Coordenadora Operacional" },
-  { name: "Mónica Pereira", role: "Coordenadora Comercial" },
-  { name: "Tiago Gonçalves", role: "Assistente Operacional" },
-  { name: "Alexandra Ramos", role: "Assistente Comercial" },
+  { name: "Pedro Belmonte", role: "Diretor Executivo", photo: "/workers/pedro.jpg" },
+  { name: "Dayanne Santos", role: "Gestora Operacional", photo: "/workers/dayane.jpg" },
+  { name: "Susana Pinto", role: "Gestora Comercial", photo: "/workers/susana.jpg" },
+  { name: "Patrícia Henriques", role: "Coordenadora Operacional", photo: "/workers/patricia.jpg" },
+  { name: "Mónica Pereira", role: "Coordenadora Comercial", photo: "/workers/monica.jpg" },
+  { name: "Tiago Gonçalves", role: "Assistente Operacional", photo: "/workers/tiago.jpg" },
+  { name: "Alexandra Ramos", role: "Assistente Comercial", photo: "/workers/alexandra.jpg" },
 ] as const;

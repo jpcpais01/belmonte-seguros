@@ -14,6 +14,8 @@ const buttonVariants = cva(
           "bg-gold text-navy shadow-soft hover:brightness-105 hover:shadow-lift hover:-translate-y-0.5",
         outline:
           "border border-navy/20 bg-transparent text-navy hover:border-navy/40 hover:bg-navy/[0.04]",
+        outlineLight:
+          "border border-white/40 bg-white/5 text-ivory backdrop-blur-sm hover:bg-white/15 hover:border-white/60",
         ghost: "text-navy hover:bg-navy/[0.06]",
         light:
           "bg-white text-navy shadow-soft hover:shadow-lift hover:-translate-y-0.5",
