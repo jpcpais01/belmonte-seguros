@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ShieldCheck, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -36,13 +37,11 @@ export function Hero() {
         <source src="/hero-background.mp4" type="video/mp4" />
       </video>
 
-      {/* Overlays for legibility */}
-      <div className="absolute inset-0 bg-gradient-to-br from-navy/90 via-navy/75 to-navy-700/85" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-navy/30" />
-      <div className="grain absolute inset-0 opacity-30" />
+      {/* Subtle overlay — keeps the video almost fully visible */}
+      <div className="absolute inset-0 bg-black/10" />
 
       <div className="container-page relative z-10 pt-28 pb-20 sm:pt-32 sm:pb-24">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl [text-shadow:0_2px_18px_rgba(0,0,0,0.55)]">
           <motion.span
             {...fade(0)}
             className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-ivory shadow-soft backdrop-blur"
@@ -77,10 +76,10 @@ export function Hero() {
             className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
           >
             <Button asChild variant="accent" size="lg">
-              <a href="#contactos">
+              <Link href="/simulacao">
                 Pedir Simulação
                 <ArrowRight className="size-4" />
-              </a>
+              </Link>
             </Button>
             <Button asChild variant="outlineLight" size="lg">
               <a href="#seguros">Ver soluções</a>

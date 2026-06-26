@@ -8,9 +8,13 @@ export type Service = {
   tag: string;
   icon: string;
   summary: string;
-  points: string[];
+  image: string;
+  imageAlt: string;
   accent: "navy" | "gold" | "teal" | "ocean";
 };
+
+const img = (id: string) =>
+  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=1200&q=80`;
 
 export const services: Service[] = [
   {
@@ -20,11 +24,8 @@ export const services: Service[] = [
     icon: "HeartPulse",
     summary:
       "Proteja quem mais ama perante imprevistos e doenças graves, com a tranquilidade de quem sabe que a família fica amparada.",
-    points: [
-      "Proteção do agregado familiar",
-      "Cobertura em caso de doença grave",
-      "Capital ajustado à fase da sua vida",
-    ],
+    image: img("1609220136736-443140cffec6"),
+    imageAlt: "Pai a brincar com os filhos ao ar livre",
     accent: "gold",
   },
   {
@@ -34,11 +35,8 @@ export const services: Service[] = [
     icon: "Stethoscope",
     summary:
       "Acesso rápido a médicos, clínicas e hospitais de qualidade, para si e para a sua família, quando mais precisa.",
-    points: [
-      "Rede alargada de prestadores",
-      "Consultas, exames e internamento",
-      "Medicina dentária e bem-estar",
-    ],
+    image: img("1631217868264-e5b90bb7e133"),
+    imageAlt: "Médica a conversar com uma paciente",
     accent: "teal",
   },
   {
@@ -48,11 +46,8 @@ export const services: Service[] = [
     icon: "Car",
     summary:
       "Conduza descansado com assistência em viagem e apoio dedicado em caso de acidente ou avaria, onde quer que esteja.",
-    points: [
-      "Assistência em viagem 24/7",
-      "Apoio em caso de acidente",
-      "Coberturas à medida do seu carro",
-    ],
+    image: img("1503376780353-7e6692767b70"),
+    imageAlt: "Automóvel a circular numa estrada",
     accent: "ocean",
   },
   {
@@ -62,11 +57,8 @@ export const services: Service[] = [
     icon: "Home",
     summary:
       "Proteja o seu lar e o seu património — para proprietários, senhorios e inquilinos — contra os imprevistos do dia a dia.",
-    points: [
-      "Incêndio, danos e fenómenos naturais",
-      "Recheio e responsabilidade civil",
-      "Assistência ao domicílio",
-    ],
+    image: img("1568605114967-8130f3a36994"),
+    imageAlt: "Casa acolhedora ao final do dia",
     accent: "navy",
   },
   {
@@ -76,11 +68,8 @@ export const services: Service[] = [
     icon: "ShieldCheck",
     summary:
       "Um apoio essencial em caso de acidente, que garante estabilidade financeira a si e a quem de si depende.",
-    points: [
-      "Cobertura em caso de invalidez",
-      "Despesas de tratamento",
-      "Proteção dentro e fora do trabalho",
-    ],
+    image: img("1461896836934-ffe607ba8211"),
+    imageAlt: "Atleta em posição de partida numa pista",
     accent: "gold",
   },
   {
@@ -90,11 +79,8 @@ export const services: Service[] = [
     icon: "PiggyBank",
     summary:
       "Construa o seu futuro com soluções de poupança e reforma pensadas para crescer consigo, ao seu ritmo.",
-    points: [
-      "Planos Poupança Reforma (PPR)",
-      "Poupança flexível e fiscalmente eficiente",
-      "Objetivos de longo prazo",
-    ],
+    image: img("1447752875215-b2761acb3c5d"),
+    imageAlt: "Caminho tranquilo numa floresta",
     accent: "teal",
   },
 ];

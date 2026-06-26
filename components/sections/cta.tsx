@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Phone, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
@@ -32,10 +33,10 @@ export function Cta() {
 
               <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Button asChild variant="accent" size="lg">
-                  <a href="#contactos">
+                  <Link href="/simulacao">
                     Pedir Simulação
                     <ArrowRight className="size-4" />
-                  </a>
+                  </Link>
                 </Button>
                 <Button asChild variant="light" size="lg">
                   <a href={site.phoneHref}>

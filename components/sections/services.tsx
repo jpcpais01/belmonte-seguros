@@ -1,11 +1,13 @@
 "use client";
 
-import { Check, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { RevealGroup, itemVariants } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { services } from "@/content/services";
-import { icons, accentClasses } from "@/lib/icons";
+import { icons } from "@/lib/icons";
 
 export function Services() {
   return (
@@ -28,65 +30,45 @@ function ServiceGrid() {
     <RevealGroup className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {services.map((s) => {
         const Icon = icons[s.icon];
-        const a = accentClasses[s.accent];
         return (
           <motion.article
             key={s.slug}
             variants={itemVariants}
-            className={`group relative flex flex-col overflow-hidden rounded-3xl border border-line bg-card p-7 shadow-soft transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-lift ${a.border}`}
+            className="group relative flex min-h-[22rem] flex-col justify-between overflow-hidden rounded-3xl border border-navy-700 p-7 text-ivory shadow-soft transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-lift"
           >
-            {/* accent glow */}
-            <div
-              aria-hidden
-              className={`pointer-events-none absolute -right-12 -top-12 size-36 rounded-full opacity-60 blur-3xl transition-opacity duration-500 group-hover:opacity-100 ${a.glow}`}
+            {/* Background image */}
+            <Image
+              src={s.image}
+              alt={s.imageAlt}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            {/* watermark icon */}
-            {Icon && (
-              <Icon
-                aria-hidden
-                strokeWidth={1}
-                className={`pointer-events-none absolute -bottom-6 -right-4 size-36 opacity-[0.06] transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-6 ${a.text}`}
-              />
-            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/55 to-navy/30" />
 
-            <div className="relative z-10 flex flex-1 flex-col">
-              <div className="flex items-center justify-between gap-3">
-                <div
-                  className={`grid size-14 place-items-center rounded-2xl ${a.bg} ${a.text}`}
-                >
-                  {Icon && <Icon className="size-7" strokeWidth={1.6} />}
-                </div>
-                <span
-                  className={`rounded-full bg-ivory px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.12em] ${a.text}`}
-                >
-                  {s.tag}
-                </span>
+            {/* Top: icon + tag */}
+            <div className="relative z-10 flex items-start justify-between">
+              <div className="grid size-12 place-items-center rounded-2xl bg-white/15 text-gold-soft ring-1 ring-white/20 backdrop-blur-md">
+                {Icon && <Icon className="size-6" strokeWidth={1.7} />}
               </div>
+              <span className="rounded-full bg-white/15 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-gold-soft ring-1 ring-white/15 backdrop-blur-md">
+                {s.tag}
+              </span>
+            </div>
 
-              <h3 className="mt-6 text-xl text-navy">{s.title}</h3>
-              <p className="mt-2.5 text-[15px] leading-relaxed text-ink-soft">
+            {/* Bottom: title + summary + CTA */}
+            <div className="relative z-10 mt-6 [text-shadow:0_1px_14px_rgba(0,0,0,0.5)]">
+              <h3 className="text-xl text-ivory">{s.title}</h3>
+              <p className="mt-2 text-[15px] leading-relaxed text-ivory/85">
                 {s.summary}
               </p>
-
-              <ul className="mt-5 space-y-2.5">
-                {s.points.map((p) => (
-                  <li
-                    key={p}
-                    className="flex items-start gap-2.5 text-sm text-ink-soft"
-                  >
-                    <Check className={`mt-0.5 size-4 shrink-0 ${a.text}`} />
-                    {p}
-                  </li>
-                ))}
-              </ul>
-
-              <a
-                href="#contactos"
-                className={`mt-auto inline-flex items-center gap-1.5 pt-7 text-sm font-semibold text-navy transition-colors ${a.linkHover}`}
+              <Link
+                href="/simulacao"
+                className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-gold-soft transition-colors hover:text-gold"
               >
                 Pedir simulação
                 <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
+              </Link>
             </div>
           </motion.article>
         );

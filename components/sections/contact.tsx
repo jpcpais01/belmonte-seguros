@@ -1,6 +1,7 @@
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import Link from "next/link";
+import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
-import { ContactForm } from "@/components/sections/contact-form";
+import { Button } from "@/components/ui/button";
 import {
   InstagramIcon,
   LinkedinIcon,
@@ -12,17 +13,18 @@ export function Contact() {
   return (
     <section id="contactos" className="scroll-mt-24 py-20 sm:py-28">
       <div className="container-page">
-        <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Info */}
           <div>
             <Reveal>
               <span className="eyebrow mb-4">Contactos</span>
               <h2 className="text-3xl sm:text-4xl lg:text-[2.6rem] lg:leading-[1.12]">
-                Vamos encontrar a solução certa para si
+                Estamos aqui para si
               </h2>
               <p className="mt-5 max-w-md text-lg leading-relaxed text-ink-soft">
-                Conte-nos o que precisa de proteger. Respondemos com rapidez e
-                sem compromisso — a simulação é gratuita.
+                Fale connosco por telefone ou email, ou passe por um dos nossos
+                escritórios no Parque das Nações. Para uma proposta à medida,
+                peça uma simulação gratuita.
               </p>
             </Reveal>
 
@@ -81,33 +83,45 @@ export function Contact() {
                 <FacebookIcon className="size-[18px]" />
               </Social>
             </Reveal>
+          </div>
 
-            {/* Map */}
-            <Reveal className="mt-6" delay={0.14}>
+          {/* Map + simulação CTA */}
+          <div className="flex flex-col gap-6">
+            <Reveal>
               <div className="overflow-hidden rounded-2xl border border-line shadow-soft">
                 <iframe
                   title="Mapa — Belmonte Seguros, Parque das Nações, Lisboa"
                   src="https://www.google.com/maps?q=Parque+das+Na%C3%A7%C3%B5es+Lisboa+Porta+do+Mar&output=embed"
-                  className="h-56 w-full grayscale-[0.2]"
+                  className="h-72 w-full grayscale-[0.2] sm:h-80"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 />
               </div>
             </Reveal>
-          </div>
 
-          {/* Form card */}
-          <Reveal delay={0.08}>
-            <div className="rounded-[2rem] border border-line bg-card p-6 shadow-lift sm:p-9">
-              <h3 className="text-xl text-navy">Pedir simulação gratuita</h3>
-              <p className="mt-1.5 text-sm text-ink-soft">
-                Preencha o formulário e entraremos em contacto consigo.
-              </p>
-              <div className="mt-7">
-                <ContactForm />
+            <Reveal delay={0.08}>
+              <div className="grain relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-navy via-navy-700 to-ocean p-8 text-ivory shadow-lift sm:p-9">
+                <div className="mesh-navy absolute inset-0 opacity-70" />
+                <div className="relative z-10">
+                  <h3 className="text-2xl text-ivory">
+                    Peça a sua simulação gratuita
+                  </h3>
+                  <p className="mt-2 max-w-md text-ivory/75">
+                    Em poucos minutos, ajudamos a encontrar a solução certa para
+                    si — sem compromisso.
+                  </p>
+                  <div className="mt-6">
+                    <Button asChild variant="accent" size="lg">
+                      <Link href="/simulacao">
+                        Pedir Simulação
+                        <ArrowRight className="size-4" />
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
               </div>
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
         </div>
       </div>
     </section>

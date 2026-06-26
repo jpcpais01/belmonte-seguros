@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/sections/section-heading";
@@ -33,10 +34,10 @@ export function Solutions() {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/88 to-navy/68" />
-                  <div className="mesh-navy absolute inset-0 opacity-40" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/68 to-navy/40" />
+                  <div className="mesh-navy absolute inset-0 opacity-25" />
 
-                  <div className="relative z-10 flex h-full flex-col">
+                  <div className="relative z-10 flex h-full flex-col [text-shadow:0_1px_12px_rgba(0,0,0,0.35)]">
                     <div className="grid size-14 place-items-center rounded-2xl bg-white/10 text-gold-soft backdrop-blur-sm">
                       {Icon && <Icon className="size-7" strokeWidth={1.6} />}
                     </div>
@@ -73,10 +74,10 @@ export function Solutions() {
 
                     <div className="mt-8 pt-2">
                       <Button asChild variant="accent" size="md">
-                        <a href="#contactos">
+                        <Link href="/simulacao">
                           {sol.cta}
                           <ArrowRight className="size-4" />
-                        </a>
+                        </Link>
                       </Button>
                     </div>
                   </div>

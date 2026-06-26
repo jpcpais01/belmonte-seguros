@@ -132,7 +132,7 @@ export default async function ArticlePage({
                 </p>
                 <div className="mt-6 flex justify-center">
                   <Button asChild variant="primary" size="lg">
-                    <Link href="/#contactos">Pedir Simulação</Link>
+                    <Link href="/simulacao">Pedir Simulação</Link>
                   </Button>
                 </div>
               </div>

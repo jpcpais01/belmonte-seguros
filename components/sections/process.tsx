@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { Button } from "@/components/ui/button";
@@ -43,7 +44,7 @@ export function Process() {
 
         <Reveal className="mt-14 flex justify-center" delay={0.1}>
           <Button asChild variant="primary" size="lg">
-            <a href="#contactos">Começar agora — é gratuito</a>
+            <Link href="/simulacao">Começar agora — é gratuito</Link>
           </Button>
         </Reveal>
       </div>

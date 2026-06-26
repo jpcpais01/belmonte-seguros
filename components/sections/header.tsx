@@ -92,7 +92,7 @@ export function Header() {
               {site.phone}
             </a>
             <Button asChild variant="accent" size="sm">
-              <a href="#contactos">Pedir Simulação</a>
+              <Link href="/simulacao">Pedir Simulação</Link>
             </Button>
           </div>
 
@@ -139,9 +139,9 @@ export function Header() {
 
               <div className="mt-6 flex flex-col gap-4">
                 <Button asChild variant="accent" size="lg">
-                  <a href="#contactos" onClick={() => setOpen(false)}>
+                  <Link href="/simulacao" onClick={() => setOpen(false)}>
                     Pedir Simulação
-                  </a>
+                  </Link>
                 </Button>
                 <a
                   href={site.phoneHref}
