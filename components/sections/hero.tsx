@@ -23,7 +23,8 @@ export function Hero() {
       id="inicio"
       className="relative flex min-h-[92svh] items-center overflow-hidden"
     >
-      {/* Video background */}
+      {/* Video background — shows plain white while it loads (no poster image) */}
+      <div className="absolute inset-0 bg-white" />
       <video
         className="absolute inset-0 size-full object-cover"
         autoPlay
@@ -31,7 +32,6 @@ export function Hero() {
         muted
         playsInline
         preload="auto"
-        poster="/hero.jpeg"
         aria-hidden
       >
         <source src="/hero-background.mp4" type="video/mp4" />

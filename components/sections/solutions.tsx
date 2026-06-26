@@ -74,7 +74,7 @@ export function Solutions() {
 
                     <div className="mt-8 pt-2">
                       <Button asChild variant="accent" size="md">
-                        <Link href="/simulacao">
+                        <Link href={sol.href}>
                           {sol.cta}
                           <ArrowRight className="size-4" />
                         </Link>

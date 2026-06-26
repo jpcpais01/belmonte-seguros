@@ -48,7 +48,7 @@ export function Footer() {
           {/* Seguros */}
           <FooterCol title="Seguros">
             {services.map((s) => (
-              <FooterLink key={s.slug} href="/#seguros">
+              <FooterLink key={s.slug} href={s.href}>
                 {s.title.replace("Seguro de ", "").replace("Seguro ", "")}
               </FooterLink>
             ))}

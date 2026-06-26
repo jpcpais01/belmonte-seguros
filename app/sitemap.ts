@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { posts } from "@/content/posts";
+import { services } from "@/content/services";
 
 const base = "https://belmonte-seguros.vercel.app";
 
@@ -11,6 +12,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(p.date),
     changeFrequency: "yearly",
     priority: 0.5,
+  }));
+
+  const seguroPages: MetadataRoute.Sitemap = services.map((s) => ({
+    url: `${base}${s.href}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  const solucaoPages: MetadataRoute.Sitemap = [
+    "/solucoes/particulares",
+    "/solucoes/empresas",
+  ].map((p) => ({
+    url: `${base}${p}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
   }));
 
   return [
@@ -34,6 +52,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     ...blogPosts,
+    ...seguroPages,
+    ...solucaoPages,
     {
       url: `${base}/politica-de-privacidade`,
       lastModified: now,

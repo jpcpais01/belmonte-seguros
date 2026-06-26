@@ -27,7 +27,7 @@ export function Services() {
 
 function ServiceGrid() {
   return (
-    <RevealGroup className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <RevealGroup className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
       {services.map((s) => {
         const Icon = icons[s.icon];
         return (
@@ -63,10 +63,10 @@ function ServiceGrid() {
                 {s.summary}
               </p>
               <Link
-                href="/simulacao"
+                href={s.href}
                 className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-gold-soft transition-colors hover:text-gold"
               >
-                Pedir simulação
+                Saber mais
                 <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             </div>

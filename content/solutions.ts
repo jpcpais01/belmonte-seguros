@@ -4,6 +4,7 @@
  */
 export type Solution = {
   id: "particulares" | "empresas";
+  href: string;
   eyebrow: string;
   title: string;
   description: string;
@@ -17,6 +18,7 @@ export type Solution = {
 export const solutions: Solution[] = [
   {
     id: "particulares",
+    href: "/solucoes/particulares",
     eyebrow: "Para si e para a sua família",
     title: "Particulares & Famílias",
     description:
@@ -39,6 +41,7 @@ export const solutions: Solution[] = [
   },
   {
     id: "empresas",
+    href: "/solucoes/empresas",
     eyebrow: "Para a sua empresa e equipa",
     title: "Empresas",
     description:

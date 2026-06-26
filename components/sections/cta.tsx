@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
@@ -9,8 +10,16 @@ export function Cta() {
     <section className="py-10 sm:py-16">
       <div className="container-page">
         <Reveal>
-          <div className="grain relative overflow-hidden rounded-[2.25rem] bg-gradient-to-br from-navy via-navy-700 to-ocean px-6 py-14 text-center shadow-lift sm:px-12 sm:py-20">
-            <div className="mesh-navy absolute inset-0 opacity-80" />
+          <div className="grain relative overflow-hidden rounded-[2.25rem] bg-navy px-6 py-14 text-center shadow-lift sm:px-12 sm:py-20">
+            <Image
+              src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=1600&q=80"
+              alt=""
+              fill
+              sizes="(max-width: 1280px) 100vw, 75rem"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-navy/92 via-navy/85 to-ocean/85" />
+            <div className="mesh-navy absolute inset-0 opacity-60" />
             <div className="pointer-events-none absolute -right-16 -top-16 size-64 rounded-full bg-gold/15 blur-3xl" />
             <div className="pointer-events-none absolute -bottom-20 -left-10 size-64 rounded-full bg-teal/15 blur-3xl" />
 
