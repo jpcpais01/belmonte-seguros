@@ -54,10 +54,10 @@ export function Hero() {
             {...fade(0.08)}
             className="mt-6 text-balance text-5xl leading-[1.04] text-ivory sm:text-6xl lg:text-7xl"
           >
-            Acima de tudo,
+            Soluções à
             <br />
             <span className="font-display italic text-gold-soft">
-              as pessoas.
+              sua medida.
             </span>
           </motion.h1>
 
@@ -65,10 +65,9 @@ export function Hero() {
             {...fade(0.16)}
             className="mt-6 max-w-xl text-lg leading-relaxed text-ivory/85"
           >
-            Soluções de seguros à sua medida - para si, para a sua família e
-            para a sua empresa. Comparamos as melhores opções de todas as
-            seguradoras a operar em Portugal, com aconselhamento próximo e
-            imparcial.
+            Para si, para a sua família e para a sua empresa. Comparamos as
+            melhores opções de todas as seguradoras a operar em Portugal, com
+            aconselhamento próximo e imparcial.
           </motion.p>
 
           <motion.div
