@@ -3,12 +3,12 @@ export const testimonials = [
   {
     name: "Luís Martins",
     stars: 5,
-    quote: "Professional and friendly, I recommend them.",
+    quote: "Profissionais e simpáticos, recomendo.",
   },
   {
     name: "John Smith",
     stars: 5,
-    quote: "Excellent professionals!",
+    quote: "Excelentes profissionais!",
   },
   {
     name: "Inês Baptista",
